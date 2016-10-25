@@ -71,7 +71,7 @@ MadFitMer = train(affinity~.,
                 affinity=read.table("gcPBM/Mad.txt")$V2,
                 MadFeaturesMer),
             trControl = tc,
-            method = "lm")
+            method = "glmnet")
 summary(MadFitMer)
 
 MadFitMerShape = train(affinity~.,
@@ -80,7 +80,7 @@ MadFitMerShape = train(affinity~.,
                       affinity=read.table("gcPBM/Mad.txt")$V2,
                       MadFeaturesMerShape),
                   trControl = tc,
-                  method = "lm")
+                  method = "glmnet")
 summary(MadFitMerShape)
 
 # Max linear fits
@@ -90,7 +90,7 @@ MaxFitMer = train(affinity~.,
                       affinity=read.table("gcPBM/Max.txt")$V2,
                       MaxFeaturesMer),
                   trControl = tc,
-                  method = "lm")
+                  method = "glmnet")
 summary(MaxFitMer)
 
 MaxFitMerShape = train(affinity~.,
@@ -99,7 +99,7 @@ MaxFitMerShape = train(affinity~.,
                       affinity=read.table("gcPBM/Max.txt")$V2,
                       MaxFeaturesMerShape),
                   trControl = tc,
-                  method = "lm")
+                  method = "glmnet")
 summary(MaxFitMerShape)
 
 # Myc linear fits
@@ -109,7 +109,7 @@ MycFitMer = train(affinity~.,
                       affinity=read.table("gcPBM/Myc.txt")$V2,
                       MycFeaturesMer),
                   trControl = tc,
-                  method = "lm")
+                  method = "glmnet")
 summary(MycFitMer)
 
 MycFitMerShape = train(affinity~.,
@@ -118,7 +118,7 @@ MycFitMerShape = train(affinity~.,
                       affinity=read.table("gcPBM/Myc.txt")$V2,
                       MycFeaturesMerShape),
                   trControl = tc,
-                  method = "lm")
+                  method = "glmnet")
 summary(MycFitMerShape)
 
 # the R^2 values were plotted in Excel.
